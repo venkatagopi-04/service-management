@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+ <body oncontextmenu="false">
+<div class="container">
+    <div class="login">
+       <div class="container">
+            <h1>Register</h1> 
+            <form method="POST">
+                <label for="mySelect">Select Role</label>
+                <select  id="role" name="role">
+                    <option>--Select--</option>
+                    <option value="1">Employee</option>
+                    <option value="0">user</option>
+                </select>        
+            <input type="text" name="username" placeholder="Username" required>     <br> <br>
+            <input type="password" name="password" placeholder="Password" required> <br> <br>
+
+                    <input type="text" name="address" placeholder="complete adress or mobile number" required>
+            
+            <button type="submit">Register</button>
+        </form>
+            <ul>
+            </ul>
+            <div class="clearfix"></div>
+       </div>
+    </div>
+    <div class="register">
+        <div class="container">
+            <i class="fa fa-sign-in fa-5x"></i>
+            <h2>Existing user!</h2>
+            <p>Welcome back</p> <br>
+            <a href="{{ url_for('login') }}">Login <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+    </div>  
+  </div>
+  <style>
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background:#e9ebee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    font-family: sans-serif;
+}
+.container{
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+  height:100%
+}
+
+/* Style the label */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #000; /* Adjust the color as needed */
+}
+
+/* Style the select element */
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: #eeeeef;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* Style the arrow icon for the select */
+select::after {
+    content: '\25BC';
+    font-size: 1.5em;
+    color: #000;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* Style the options in the dropdown */
+select option {
+    background-color: #eeeeef;
+}
+
+/* Example of modifying the hover state for the select */
+select:hover {
+    border: 1px solid #9526a9;
+}
+
+.login ,.register{width: 50%}
+
+/*Start Login Style*/
+.login{
+    float:left;
+    background-color: #fafafa;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+    text-align: center;
+    padding-top: 100px;
+}
+.login h1{
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+input[type="select"] , input[type="password"] , input[type="text"]{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: none;
+    background-color: #eeeeef;
+}
+input[type="checkbox"]{
+    float: left;
+    margin-right: 5px;
+}
+.login span{
+    float: left
+}
+.login a{
+    float: right;
+    text-decoration: none;
+    color: #000;
+    transition: 0.3s all ease-in-out;
+}
+.login a:hover{color: #9526a9;font-weight: bold}
+.login button{
+    width: 100%;
+    margin: 30px 0;
+    padding: 10px;
+    border: none;
+    background-color: #9526a9;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+}
+.login button:hover{
+    width:97%;
+    font-size: 22px;
+    border-radius: 5px;
+    
+}
+.login hr{
+    width: 30%;
+    display: inline-block
+}
+
+.login p{
+    display: inline-block;
+    margin: 0px 10px 30px;
+}
+.login ul{
+    list-style: none;
+    margin-bottom:40px;  
+}
+.login ul li{
+    display: inline-block;
+    margin-right: 30px;
+    cursor: pointer;
+}
+.login ul li:hover{opacity: 0.6}
+.login ul li:last-child{margin-right: 0}
+.login .copyright{
+    display: inline-block;
+    float: none;
+}
+
+.register{
+    float: right;
+    background-image: linear-gradient(135deg, #23212f 5%, #9526a9 95%);
+    height: 100%;
+    color:#fff;
+    border-radius:  0 10px 10px  0;
+    text-align: center;
+    padding: 100px 0;
+}
+.register h2{
+    margin: 30px 0;
+    font-size: 50px;
+    letter-spacing: 3px
+}
+.register p{
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.register a{
+    background-color: transparent;
+    border: 1px solid #FFF;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition:0.2s all  ease-in-out;
+    text-decoration: none;
+}
+.register a:hover{
+    color: #9526a9;
+    background-color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+/* Style the select element directly */
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: none;
+    background-color: #eeeeef;
+    appearance: none; /* Remove default arrow in some browsers */
+    -webkit-appearance: none; /* Remove default arrow in older versions of Chrome and Safari */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+}
+
+/* Style the arrow icon for the select */
+select::after {
+    content: '\25BC'; /* Unicode character for a down-pointing triangle */
+    font-size: 1.5em;
+    color: #000;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none; /* Ensure the arrow doesn't interfere with select interaction */
+}
+
+/* Style the options in the dropdown */
+select option {
+    background-color: #eeeeef;
+}
+
+/* Example of modifying the hover state for the select */
+select:hover {
+    border: 1px solid #9526a9;
+}
+
+  </style>
+  <script src="https://kit.fontawesome.com/d2ed415255.js"></script>
+</body>
+</html>
