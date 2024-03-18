@@ -4,7 +4,7 @@ Service Management: Effective coordination of resources &amp; processes to deliv
 
 ---
 
-# Flask Task Management System
+# Task Management System
 
 This Flask-based Task Management System allows users to register, log in, add, edit, and delete tasks. It includes role-based access control, where administrators have additional privileges compared to regular users. Tasks can be marked as completed, and the system provides a dashboard to manage tasks efficiently.
 
