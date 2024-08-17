@@ -30,7 +30,7 @@ This Flask-based Task Management System allows users to register, log in, add, e
 - Log out securely after usage.
 
 ## Contributors
-- [Your Name](https://github.com/venkatagopi004)
+- [Venkatagopi Muvva](https://github.com/venkatagopi004)
 
 
 
